@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>REDIN Group | Powering the Circular Economy</title>
+  <meta name="description" content="REDIN Group drives environmental compliance, circular economy, recycling and sustainable implementation across Nigeria." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16v-4l2-5h10l2 5v4M3 16h18M7.5 16v2.5M16.5 16v2.5M6 12h12"/><circle cx="8" cy="14" r=".6"/><circle cx="16" cy="14" r=".6"/></g></symbol>
+      <symbol id="i-recycle" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-15.5-6.2L3 8M3 3v5h5M3 12a9 9 0 0 0 15.5 6.2L21 16M21 21v-5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.85-5.36 5.08-6C9.5 14.5 12 13 13 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM21 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-factory" viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2zM17 18h1M12 18h1M7 18h1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-battery" viewBox="0 0 24 24"><path d="M6 7h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM22 11v2M11.5 9.5L9.5 12h3l-2 2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-bin" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html#home" aria-label="REDIN Group home">
+        <svg class="logo-mark" aria-hidden="true"><use href="#i-recycle"/></svg>
+        <span class="logo-text">
+          <strong>REDIN</strong>
+          <small>Recycling and Economic Development<br />Initiative of Nigeria</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="about.html">About the Group</a></li>
+          <li><a href="#group">Our Companies</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Partner With Us <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="home" class="hero" style="--img: url('Images/hero.jpg')">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Powering the<br />Circular Economy</h1>
+          <p>We drive environmental compliance, circular economy, recycling and sustainable implementation for a cleaner Nigeria and a more resilient future.</p>
+          <div class="btn-row">
+            <a href="#group" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR GROUP -->
+    <section id="group" class="section section-tint">
+      <div class="container group-grid">
+        <div class="group-copy">
+          <p class="eyebrow">Our Group</p>
+          <h2>A Stronger Impact Through a Unified Group</h2>
+          <p>REDIN Group is a leading environmental organisation driving environmental compliance, circular economy development, recycling and sustainable implementation across Nigeria and beyond.</p>
+          <a href="about.html" class="btn btn-primary">About REDIN Group <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <article class="company-card company-card--mint" style="--img: url('Images/WhatsApp Image 2026-09-23 at 09.08.21 (1).jpeg')">
+          <div class="company-logo">
+            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
+            <strong>REDIN</strong>
+          </div>
+          <h3>REDIN Initiative</h3>
+          <p>Advancing environmental compliance, circular economy, education, advocacy and programme implementation across Nigeria.</p>
+          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+
+        <article class="company-card company-card--slate" style="--img: url('Images/vimal-s-GBg3jyGS-Ug-unsplash.jpg')">
+          <div class="company-logo">
+            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
+            <strong>REDIN</strong>
+          </div>
+          <h3>REDIN Global Resources Ltd.</h3>
+          <p>Commercialises and scales recycling, project development, consultancy and sustainable infrastructure solutions.</p>
+          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+
+        <article class="company-card company-card--mint" style="--img: url('Images/patrick-hendry-6xeDIZgoPaw-unsplash.jpg')">
+          <div class="company-logo">
+            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
+            <strong>REDIN</strong>
+          </div>
+          <h3>REDIN Industries</h3>
+          <p>Advancing environmental compliance, circular economy, education, advocacy and programme implementation across Nigeria.</p>
+          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Our Flagship Projects</p>
+            <h2>Driving a Cleaner, More Circular Nigeria</h2>
+          </div>
+          <a href="#projects" class="text-link">View All Projects <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!-- Clicking anywhere on a card opens its popup (see the <dialog> elements below) -->
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-img" style="--img: url('Images/project-emission.jpg')"></div>
+            <div class="project-body">
+              <span class="badge"><svg class="ico"><use href="#i-car"/></svg></span>
+              <h3><button type="button" class="project-open" data-modal="modal-elv">End-of-Life Vehicle Recycling</button></h3>
+              <p>Safe, compliant and resource efficient recycling of end-of-life vehicles.</p>
+              <span class="round-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img" style="--img: url('Images/project-epr.jpg')"></div>
+            <div class="project-body">
+              <span class="badge"><svg class="ico"><use href="#i-file"/></svg></span>
+              <h3><button type="button" class="project-open" data-modal="modal-regulation">Motor Vehicle Regulation</button></h3>
+              <p>Turning motor-vehicle environmental requirements into practical, coordinated action.</p>
+              <span class="round-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-img" style="--img: url('Images/project-fume.jpg')"></div>
+            <div class="project-body">
+              <span class="badge"><svg class="ico"><use href="#i-leaf"/></svg></span>
+              <h3><button type="button" class="project-open" data-modal="modal-emission">Vehicle Emission Testing</button></h3>
+              <p>Supporting cleaner air through accurate and reliable emission testing services.</p>
+              <span class="round-arrow" aria-hidden="true"><svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section section-tint">
+      <div class="container">
+        <p class="eyebrow">Our Services</p>
+        <h2>Expertise for a Sustainable Future</h2>
+
+        <ul class="service-grid">
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-car"/></svg></span>
+            <h3>Automotive Environmental Compliance and Circularity</h3>
+            <p>REDIN Initiative leads motor-vehicle producer responsibility compliance. REDIN Global Resources Ltd. delivers end-of-life vehicle recycling and vehicle-emission testing programs.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-factory"/></svg></span>
+            <h3>Industrial Facility Development</h3>
+            <p>REDIN Industries develops and builds waste-to-energy plants, vehicle recycling facilities, and related infrastructure for resource recovery and clean industrial development.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-recycle"/></svg></span>
+            <h3>Recycling &amp; Resource Recovery</h3>
+            <p>Recovery and recycling of tires, plastics, metals, automotive materials and other recyclable waste streams.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-battery"/></svg></span>
+            <h3>Battery Recycling &amp; Producer Responsibility</h3>
+            <p>Responsible collection, recycling, stewardship and Extended Producer Responsibility support for battery-related waste.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-bin"/></svg></span>
+            <h3>Waste Management &amp; Circular Economy</h3>
+            <p>Waste reduction, collection, recovery, recycling and resource-efficiency approaches that keep materials in productive use.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-file"/></svg></span>
+            <h3>Environmental Consulting &amp; Advisory</h3>
+            <p>Environmental strategy, feasibility studies, program design, public-sector advisory, regulatory implementation planning and sustainability support.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-users"/></svg></span>
+            <h3>Environmental Education &amp; Capacity Building</h3>
+            <p>Training and awareness for individuals, companies, institutions, public agencies and communities on recycling, compliance and environmental responsibility.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-search"/></svg></span>
+            <h3>Research, Policy &amp; Environmental Advocacy</h3>
+            <p>Research, stakeholder engagement, policy support, thought leadership and public awareness on environmental issues.</p>
+          </li>
+          <li class="service-item">
+            <span class="badge"><svg class="ico"><use href="#i-gear"/></svg></span>
+            <h3>Sustainable Infrastructure &amp; Environmental Technology</h3>
+            <p>Evaluation and support for technologies and infrastructure that enable environmental protection, monitoring, recycling and resource recovery.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE (carousel) -->
+    <section id="experience" class="section">
+      <div class="container experience-grid">
+        <div class="experience-copy">
+          <p class="eyebrow">Our Experience</p>
+          <h2>Proven Experience. Real Impact.</h2>
+          <p>We've delivered environmental solutions, sustainable infrastructure and capacity development programmes across Nigeria, in collaboration with government, industry and development partners.</p>
+          <a href="#projects" class="btn btn-primary btn-sm">Our Projects <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="carousel-wrap" role="region" aria-label="Project photo carousel">
+          <div class="carousel" id="carousel">
+            <div class="card"><img src="Images/Picture1.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture5.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture3.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture4.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture6.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture7.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture8.png" alt="" /></div>
+            <div class="card"><img src="Images/Picture9.png" alt="" /></div>
+          </div>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACK RECORD (split) -->
+    <section id="track-record" class="split">
+      <div class="split-panel">
+        <p class="eyebrow eyebrow--light">Our Track Record</p>
+        <h2>Records that Speak Volumes</h2>
+        <p class="lead">A history of practical environmental work, research and stakeholder engagement.</p>
+
+        <h3>Selected historical capabilities</h3>
+        <ul class="check-list">
+          <li>Tyre recycling operations and automotive-waste experience in Abuja.</li>
+          <li>Used-battery research and environmental stewardship activities.</li>
+          <li>Value-from-waste stakeholder engagement and environmental workshops.</li>
+          <li>Feasibility studies, project planning and environmental-program development for recycling, waste-management and clean-technology initiatives.</li>
+          <li>Solid-waste and construction-waste collection experience.</li>
+          <li>Environmental advocacy, research and engagement with local and international technical stakeholders.</li>
+        </ul>
+      </div>
+      <div class="split-media" style="--img: url('Images/Back.jpg')" aria-hidden="true"></div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section section-tint">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">Our Leadership</p>
+          <h2>Results-Driven Leadership</h2>
+          <p class="lead">Environmental leadership built on experience, collaboration and continuous learning.</p>
+        </div>
+
+        <div class="leader-grid">
+          <figure class="leader-card">
+            <div class="leader-photo" style="--img: url('Images/terseer.jpg')" role="img" aria-label="Portrait of Hon. Terseer Ugbor"></div>
+            <figcaption>
+              <strong>Hon. Terseer Ugbor</strong>
+              <span>Chairman / CEO</span>
+            </figcaption>
+          </figure>
+
+          <div class="leader-copy">
+            <article class="info-card">
+              <h3>Leadership direction</h3>
+              <p>REDIN's leadership direction is to combine deep environmental-sector experience with stronger program implementation, regulatory readiness, consulting capability, public education, corporate governance and measurable environmental outcomes.</p>
+            </article>
+
+            <article class="info-card">
+              <h3>Building a global presence</h3>
+              <ul class="check-list">
+                <li>Develop strategic technical and knowledge partnerships with credible international organizations.</li>
+                <li>Participate in regional and global environmental, recycling, circular-economy and sustainability forums.</li>
+                <li>Publish practical insights, research and thought leadership based on REDIN's program experience.</li>
+                <li>Pursue knowledge exchange, capacity building and cross-border project collaboration.</li>
+                <li>Align REDIN's public identity and delivery standards with the expectations of government, development, investor and technical audiences.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK WITH REDIN / CONTACT -->
+    <section id="contact" class="section">
+      <div class="container work-grid">
+        <div class="work-copy">
+          <p class="eyebrow">Partner With Us</p>
+          <h2>We can't wait to work with you</h2>
+          <p class="lead">Partnerships that turn environmental priorities into practical action.</p>
+          <p class="body-text">REDIN welcomes collaboration with government institutions, regulators, private-sector organizations, development partners, technical organizations, researchers, communities and other stakeholders working to advance environmental sustainability and circular-economy outcomes.</p>
+
+          <h3>Engagement opportunities</h3>
+          <ul class="check-list">
+            <li>Environmental and circular-economy programs</li>
+            <li>Consulting and advisory assignments</li>
+            <li>Environmental education and capacity building</li>
+            <li>Recycling and resource-recovery initiatives</li>
+            <li>Research, policy and stakeholder engagement</li>
+            <li>Technical partnerships and knowledge exchange</li>
+          </ul>
+        </div>
+
+        <!-- Connect action="" to your backend or a form service (Formspree, Netlify Forms, etc.) -->
+        <form class="contact-form" action="https://formspree.io/f/xljdzpqo" method="post">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="What's your name?" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="How can we help you?" />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" placeholder="Write your message"></textarea>
+          </div>
+
+          <div class="form-bottom">
+            <p class="privacy-note">We will never collect information about you without your explicit consent.</p>
+            <button type="submit" class="btn btn-primary">Submit request <svg class="ico"><use href="#i-arrow"/></svg></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> REDIN Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT POPUPS ================= -->
+
+  <dialog class="modal" id="modal-elv" aria-labelledby="modal-elv-title">
+    <button type="button" class="modal-close" data-close aria-label="Close project details">&times;</button>
+    <div class="modal-inner">
+      <div class="modal-media" style="--img: url('Images/project-elv.jpg')"></div>
+      <div class="modal-body">
+        <p class="eyebrow">In collaboration with NADDC</p>
+        <h2 id="modal-elv-title">End-of-Life Vehicle (ELV) Recycling</h2>
+        <p class="lead">REDIN is advancing an End-of-Life Vehicle recycling program in collaboration with NADDC, aligned with Nigeria's End-of-Life Vehicles and Other Related Automotive Waste Recycling Regulations, 2024. The framework establishes a national system for collecting, delivering, depolluting, dismantling, shredding, and recycling end-of-life vehicles and related automotive waste, while creating structured roles for data management, certification, producer responsibility, stakeholder coordination, and public awareness.</p>
+
+        <h3>Program focus</h3>
+        <ul class="check-list">
+          <li>Support a coordinated network for collection, delivery and recycling of end-of-life and abandoned vehicles through compliant recycling operators.</li>
+          <li>Support ELV data management, certification, documentation and reporting systems that improve traceability and program accountability.</li>
+          <li>Support automotive Extended Producer Responsibility through engagement with manufacturers, importers, dealers and other sector stakeholders.</li>
+          <li>Support state-level project development, sensitization and public awareness that encourage responsible vehicle disposal and recycling.</li>
+          <li>Coordinate stakeholders, operator compliance, implementation planning and recycling support across the ELV ecosystem.</li>
+        </ul>
+
+        <div class="modal-note">
+          <h3>REDIN's implementation contribution</h3>
+          <p>REDIN's implementation contribution is to help translate the ELV regulatory framework into a coordinated and scalable operating program. This includes program governance, stakeholder engagement, operator-network coordination, state implementation planning, public awareness, data and certification workflows, producer engagement, risk management, monitoring and measurable delivery outcomes. Any formal Designated Recycling Organization or Producer Responsibility Organization functions will be represented in accordance with the applicable appointment, accreditation and approved agreements.</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-regulation" aria-labelledby="modal-regulation-title">
+    <button type="button" class="modal-close" data-close aria-label="Close project details">&times;</button>
+    <div class="modal-inner">
+      <div class="modal-media" style="--img: url('Images/project-epr.jpg')"></div>
+      <div class="modal-body">
+        <p class="eyebrow">In collaboration with NESREA</p>
+        <h2 id="modal-regulation-title">Motor Vehicle Regulation</h2>
+        <p class="lead">REDIN is supporting a Motor Vehicle Regulation program in collaboration with NESREA to strengthen practical implementation of environmental requirements affecting motor vehicles and the automotive value chain. The reviewed ELV framework expressly links end-of-life vehicle recycling to applicable NESREA motor-vehicle environmental requirements, reinforcing the need for coordinated compliance, operator readiness, monitoring, and public understanding.</p>
+
+        <h3>Program focus</h3>
+        <ul class="check-list">
+          <li>Translate approved motor-vehicle environmental requirements into clear implementation workstreams, milestones and responsibilities.</li>
+          <li>Support coordination among regulators, public agencies, operators, technical stakeholders and other affected parties.</li>
+          <li>Support facility/operator compliance readiness, registration pathways, monitoring and implementation follow-through.</li>
+          <li>Strengthen stakeholder awareness of environmental obligations, recycling responsibilities and compliance expectations.</li>
+          <li>Track implementation progress, barriers, corrective actions and decisions required to move the program forward.</li>
+        </ul>
+
+        <div class="modal-note">
+          <h3>REDIN's implementation contribution</h3>
+          <p>REDIN will provide program coordination, implementation planning, stakeholder engagement, governance support, risk and issue management, public-awareness support and structured follow-through so that approved regulatory requirements can move from policy intent into practical execution.</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="modal-emission" aria-labelledby="modal-emission-title">
+    <button type="button" class="modal-close" data-close aria-label="Close project details">&times;</button>
+    <div class="modal-inner">
+      <div class="modal-media" style="--img: url('Images/project-emission.jpg')"></div>
+      <div class="modal-body">
+        <p class="eyebrow">In collaboration with NESREA</p>
+        <h2 id="modal-emission-title">Vehicle Emission Testing</h2>
+        <p class="lead">REDIN is advancing a Vehicle Emission Testing program in collaboration with NESREA, aligned with the National Environmental (Control of Vehicular Emissions from Petrol and Diesel Engines) Regulations, 2011. The framework requires vehicles in operation in Nigeria to undergo annual emission testing at licensed facilities and provides for certification, recordkeeping, prescribed emission limits and enforcement action for non-compliant vehicles.</p>
+
+        <h3>Program focus</h3>
+        <ul class="check-list">
+          <li>Support accessible annual vehicle-emission testing through appropriately licensed facilities.</li>
+          <li>Support testing against prescribed petrol, diesel and smoke-emission requirements, including relevant CO, HC, NOx, particulate and opacity measures.</li>
+          <li>Support certification and reliable records of vehicle registration, test dates, results, compliance status and testing history.</li>
+          <li>Build public awareness linking vehicle maintenance, emissions compliance, cleaner air and environmental responsibility.</li>
+          <li>Support centralized compliance information that can strengthen monitoring, planning and enforcement by the competent authorities.</li>
+        </ul>
+
+        <div class="modal-note">
+          <h3>REDIN's implementation contribution</h3>
+          <p>REDIN's implementation contribution will focus on program design, testing-network rollout, stakeholder coordination, readiness, data and certification workflows, public awareness, risk management and performance tracking. Technical testing standards, licensing, certification authority and enforcement remain anchored to the applicable regulatory requirements and competent authorities.</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="site.js"></script>
+  <script src="Carousel.js"></script>
+</body>
+</html>
