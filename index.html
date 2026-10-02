@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- if JavaScript is off, show headings that would otherwise stay hidden -->
+  <noscript><style>h2 { opacity: 1; transform: none; }</style></noscript>
 </head>
 <body>
 
@@ -32,13 +34,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html#home" aria-label="REDIN Group home">
-        <svg class="logo-mark" aria-hidden="true"><use href="#i-recycle"/></svg>
-        <span class="logo-text">
-          <strong>REDIN</strong>
-          <small>Recycling and Economic Development<br />Initiative of Nigeria</small>
-        </span>
-      </a>
+      <img src="Images/logo-redin-group.png" sizes="10px" alt="REDIN Group logo" class="site-logo" />
 
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
@@ -86,32 +82,42 @@
 
         <article class="company-card company-card--mint" style="--img: url('Images/WhatsApp Image 2026-09-23 at 09.08.21 (1).jpeg')">
           <div class="company-logo">
-            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
-            <strong>REDIN</strong>
-          </div>
-          <h3>REDIN Initiative</h3>
+           <strong class="strong"><img
+    src="Images/logo-redin-group.png"
+    alt="REDIN Group"
+    class="site-logo"
+    width="160"
+    height="40"
+  />
+</a>Initiative</strong></div>
           <p>Advancing environmental compliance, circular economy, education, advocacy and programme implementation across Nigeria.</p>
-          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
         </article>
 
         <article class="company-card company-card--slate" style="--img: url('Images/vimal-s-GBg3jyGS-Ug-unsplash.jpg')">
           <div class="company-logo">
-            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
-            <strong>REDIN</strong>
-          </div>
-          <h3>REDIN Global Resources Ltd.</h3>
+            <strong class="strong"><img
+    src="Images/logo-redin-group.png"
+    alt="REDIN Group"
+    class="site-logo"
+    width="160"
+    height="40"
+  />
+</a>Global Resources Ltd.</strong></div>
           <p>Commercialises and scales recycling, project development, consultancy and sustainable infrastructure solutions.</p>
-          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
         </article>
 
         <article class="company-card company-card--mint" style="--img: url('Images/patrick-hendry-6xeDIZgoPaw-unsplash.jpg')">
           <div class="company-logo">
-            <svg aria-hidden="true"><use href="#i-recycle"/></svg>
-            <strong>REDIN</strong>
-          </div>
-          <h3>REDIN Industries</h3>
-          <p>Advancing environmental compliance, circular economy, education, advocacy and programme implementation across Nigeria.</p>
-          <a href="#" class="text-link">Learn More <svg class="ico"><use href="#i-arrow"/></svg></a>
+            
+  <strong class="strong"><img
+    src="Images/logo-redin-group.png"
+    alt="REDIN Group"
+    class="site-logo"
+    width="160"
+    height="40"
+  />
+</a>Industries</strong></div>
+          <p>Develops and builds waste-to-energy plants, vehicle recycling facilities, and related infrastructure for resource recovery and clean industrial development.</p>
         </article>
       </div>
     </section>
@@ -130,7 +136,7 @@
         <!-- Clicking anywhere on a card opens its popup (see the <dialog> elements below) -->
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-img" style="--img: url('Images/project-emission.jpg')"></div>
+            <div class="project-img" style="--img: url('Images/pexels-aziz-er-2158219793-35503911.jpg')"></div>
             <div class="project-body">
               <span class="badge"><svg class="ico"><use href="#i-car"/></svg></span>
               <h3><button type="button" class="project-open" data-modal="modal-elv">End-of-Life Vehicle Recycling</button></h3>
@@ -150,7 +156,7 @@
           </article>
 
           <article class="project-card">
-            <div class="project-img" style="--img: url('Images/project-fume.jpg')"></div>
+            <div class="project-img" style="--img: url('Images/car-pollution.jpg')"></div>
             <div class="project-body">
               <span class="badge"><svg class="ico"><use href="#i-leaf"/></svg></span>
               <h3><button type="button" class="project-open" data-modal="modal-emission">Vehicle Emission Testing</button></h3>
@@ -225,7 +231,6 @@
           <p class="eyebrow">Our Experience</p>
           <h2>Proven Experience. Real Impact.</h2>
           <p>We've delivered environmental solutions, sustainable infrastructure and capacity development programmes across Nigeria, in collaboration with government, industry and development partners.</p>
-          <a href="#projects" class="btn btn-primary btn-sm">Our Projects <svg class="ico"><use href="#i-arrow"/></svg></a>
         </div>
 
         <div class="carousel-wrap" role="region" aria-label="Project photo carousel">
@@ -234,12 +239,19 @@
             <div class="card"><img src="Images/Picture5.png" alt="" /></div>
             <div class="card"><img src="Images/Picture3.png" alt="" /></div>
             <div class="card"><img src="Images/Picture4.png" alt="" /></div>
-            <div class="card"><img src="Images/Picture6.png" alt="" /></div>
             <div class="card"><img src="Images/Picture7.png" alt="" /></div>
             <div class="card"><img src="Images/Picture8.png" alt="" /></div>
             <div class="card"><img src="Images/Picture9.png" alt="" /></div>
           </div>
-          <div class="carousel-dots" id="carousel-dots"></div>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-arrow carousel-arrow--prev" data-dir="-1" aria-label="Previous photos">
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <div class="carousel-dots" id="carousel-dots"></div>
+            <button type="button" class="carousel-arrow carousel-arrow--next" data-dir="1" aria-label="Next photos">
+              <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -275,10 +287,10 @@
 
         <div class="leader-grid">
           <figure class="leader-card">
-            <div class="leader-photo" style="--img: url('Images/terseer.jpg')" role="img" aria-label="Portrait of Hon. Terseer Ugbor"></div>
+            <div class="leader-photo" style="--img: url('Images/WhatsApp Image 2026-09-30 at 17.01.05.jpeg')" role="img" aria-label="Portrait of Terseer Ugbor"></div>
             <figcaption>
-              <strong>Hon. Terseer Ugbor</strong>
-              <span>Chairman / CEO</span>
+              <strong>Terseer Ugbor</strong>
+              <span>Chairman</span>
             </figcaption>
           </figure>
 
@@ -323,34 +335,44 @@
           </ul>
         </div>
 
-        <!-- Connect action="" to your backend or a form service (Formspree, Netlify Forms, etc.) -->
-        <form class="contact-form" action="https://formspree.io/f/xljdzpqo" method="post">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Your name <span aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" placeholder="What's your name?" autocomplete="name" required />
+        <!-- The wrap holds the form and the "thank you" overlay that covers it after sending -->
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/xljdzpqo" method="post">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Your name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="What's your name?" autocomplete="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required />
+              </div>
             </div>
+
             <div class="form-field">
-              <label for="email">Email address <span aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required />
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help you?" />
+            </div>
+
+            <div class="form-field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Write your message"></textarea>
+            </div>
+
+            <div class="form-bottom">
+              <p class="privacy-note">We will never collect information about you without your explicit consent.</p>
+              <button type="submit" class="btn btn-primary">Submit request <svg class="ico"><use href="#i-arrow"/></svg></button>
+            </div>
+          </form>
+
+          <div class="form-success" id="form-success" hidden>
+            <div class="form-success-inner">
+              <h3>Thank you</h3>
+              <p>Your message has been sent. We'll get back to you soon.</p>
+              <button type="button" class="btn btn-primary" id="form-success-close">Send another message</button>
             </div>
           </div>
-
-          <div class="form-field">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="How can we help you?" />
-          </div>
-
-          <div class="form-field">
-            <label for="message">Your message</label>
-            <textarea id="message" name="message" placeholder="Write your message"></textarea>
-          </div>
-
-          <div class="form-bottom">
-            <p class="privacy-note">We will never collect information about you without your explicit consent.</p>
-            <button type="submit" class="btn btn-primary">Submit request <svg class="ico"><use href="#i-arrow"/></svg></button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
   </main>
@@ -366,7 +388,7 @@
   <dialog class="modal" id="modal-elv" aria-labelledby="modal-elv-title">
     <button type="button" class="modal-close" data-close aria-label="Close project details">&times;</button>
     <div class="modal-inner">
-      <div class="modal-media" style="--img: url('Images/project-elv.jpg')"></div>
+      <div class="modal-media" style="--img: url('Images/pexels-aziz-er-2158219793-35503911.jpg')"></div>
       <div class="modal-body">
         <p class="eyebrow">In collaboration with NADDC</p>
         <h2 id="modal-elv-title">End-of-Life Vehicle (ELV) Recycling</h2>
@@ -418,7 +440,7 @@
   <dialog class="modal" id="modal-emission" aria-labelledby="modal-emission-title">
     <button type="button" class="modal-close" data-close aria-label="Close project details">&times;</button>
     <div class="modal-inner">
-      <div class="modal-media" style="--img: url('Images/project-emission.jpg')"></div>
+      <div class="modal-media" style="--img: url('Images/car-pollution.jpg')"></div>
       <div class="modal-body">
         <p class="eyebrow">In collaboration with NESREA</p>
         <h2 id="modal-emission-title">Vehicle Emission Testing</h2>

@@ -60,15 +60,15 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
   display: inline-flex; align-items: center; gap: 10px;
   padding: 10px 20px;
   border-radius: var(--radius-sm);
-  font: 600 .95rem/1 inherit;
+  font-family: inherit; font-size: .95rem; font-weight: 600; line-height: 1;
   border: 1.5px solid transparent;
   cursor: pointer;
   transition: background .2s, color .2s, border-color .2s, transform .2s;
-  margin-top: auto;
 }
 .btn .ico { width: 16px; height: 16px; }
 .btn-primary { background: var(--green-800); color: #fff; }
 .btn-primary:hover { background: var(--green-900); }
+.btn-primary:disabled { opacity: .7; cursor: default; }
 .btn-outline { background: rgba(255,255,255,.55); color: var(--green-800); border-color: #c9d99a; backdrop-filter: blur(4px); }
 .btn-outline:hover { background: #fff; border-color: var(--green-600); }
 .btn-light { background: #fff; color: var(--green-800); }
@@ -85,13 +85,51 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
 
 /* ---------- Header ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0,0,0,.05);
+  position: sticky;          /* optional */
+  top: 0;
+  z-index: 100;
+  background: #fff;          /* or your header bg */
+  border-bottom: 1px solid rgba(15, 27, 19, 0.08);
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 72px;          /* header bar height */
+  padding-block: 12px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;            /* kills extra space under the img */
+  text-decoration: none;
+}
+
+.site-logo {
+  display: block; 
+  height: 40px;            /* fits a ~72px header */
+  width: auto;               /* keeps aspect ratio */
+  max-width: min(180px, 42vw);
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* slightly smaller on mobile so nav has room */
+@media (max-width: 768px) {
+  .header-inner {
+    min-height: 64px;
+    padding-block: 10px;
+  }
+
+  .site-logo {
+    height: 32px;
+    max-width: 140px;
+  }
+}
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo-mark { width: 46px; height: 46px; color: var(--green-600); }
 .logo-text { display: flex; flex-direction: column; line-height: 1; }
@@ -109,16 +147,17 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Headings fade in as they scroll into view (site.js adds .show) */
 h2 {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 h2.show {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* ---------- Image slots (gradient fallback + photo on top) ---------- */
 .hero, .project-img, .modal-media, .split-media, .leader-photo, .cta {
   background-size: cover;
@@ -184,7 +223,10 @@ h2.show {
 .group-copy { grid-column: 1 / -1; margin-bottom: 12px; }   /* intro sits on its own row above the cards */
 .group-copy h2 { max-width: 22ch; }
 .group-copy p:not(.eyebrow) { margin: 20px 0 28px; color: var(--muted); max-width: 60ch; }
-
+.strong{
+  display: flex;
+  gap: 8px;
+}
 .company-card {
   position: relative; overflow: hidden;
   display: flex; flex-direction: column; gap: 12px;
@@ -200,7 +242,7 @@ h2.show {
 }
 .company-card--mint  { --fb: linear-gradient(135deg, #2e7d4f, #0d4a2b); }
 .company-card--slate { --fb: linear-gradient(135deg, #4a6b82, #22384a); }
-.company-logo { display: flex; align-items: center; gap: 8px; margin-bottom: auto; }   /* logo top, text pinned to the bottom */
+.company-logo { display: flex; align-items: center; gap: 8px; margin-bottom: auto; }   /* name top, text pinned to the bottom */
 .company-logo svg { width: 38px; height: 38px; color: #a9e0b8; }
 .company-logo strong { font-size: 1.7rem; font-weight: 800; letter-spacing: -.04em; color: #fff; }
 .company-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; }
@@ -328,7 +370,30 @@ h2.show {
 }
 .card img { width: 100%; height: 100%; object-fit: cover; }
 
-.carousel-dots { display: flex; justify-content: center; align-items: center; gap: 7px; margin-top: 16px; }
+.carousel-controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 16px; }
+.carousel-dots { display: flex; justify-content: center; align-items: center; gap: 7px; }
+
+/* arrows: hidden by default, shown only on mouse/trackpad devices */
+.carousel-arrow {
+  display: none;
+  place-items: center;
+  width: 36px; height: 36px; padding: 0;
+  border: 0; border-radius: 50%;
+  background: var(--green-100); color: var(--green-800);
+  cursor: pointer;
+  transition: background .2s, color .2s, opacity .2s;
+}
+.carousel-arrow .ico { width: 16px; height: 16px; }
+.carousel-arrow--prev .ico { transform: rotate(180deg); }
+.carousel-arrow:hover:not(:disabled) { background: var(--green-800); color: #fff; }
+.carousel-arrow:disabled { opacity: .35; cursor: default; }
+
+/* mouse devices at any width, plus any large screen (e.g. Nest Hub Max, 1280px).
+   Phones and tablets (touch, up to 1024px) stay arrow-free. */
+@media (hover: hover) and (pointer: fine), (min-width: 1025px) {
+  .carousel-arrow { display: inline-grid; }
+}
+
 .carousel-dot {
   width: 7px; height: 7px; padding: 0;
   border: none; border-radius: 50%;
@@ -383,6 +448,8 @@ h2.show {
 .work-copy .body-text { margin-top: 16px; color: var(--muted); font-size: .95rem; max-width: 56ch; }
 .work-copy h3 { font-size: 1.1rem; font-weight: 700; margin: 32px 0 16px; }
 
+.contact-form-wrap { position: relative; }
+
 .contact-form {
   display: grid; gap: 20px;
   background: var(--bg-tint);
@@ -390,14 +457,27 @@ h2.show {
   border-radius: var(--radius);
   padding: 32px;
 }
+
+/* "Thank you" panel that covers the form after a successful send */
+.form-success {
+  position: absolute; inset: 0; z-index: 5;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-tint);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px; text-align: center;
+}
+.form-success[hidden] { display: none; }
+.form-success-inner h3 { margin-bottom: 12px; font-size: 1.3rem; }
+.form-success-inner p { color: var(--muted); }
+.form-success-inner .btn { margin-top: 20px; }
+
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-field label { display: block; margin-bottom: 8px; font-size: .85rem; font-weight: 600; color: var(--green-800); }
 .form-field input,
 .form-field textarea {
   width: 100%;
   padding: 13px 14px;
-  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  
+  font-family: inherit; font-size: .95rem; line-height: 1.4;
   color: var(--text);
   background: #fff;
   border: 1.5px solid var(--line);
@@ -428,8 +508,8 @@ h2.show {
 .mv-card h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); font-weight: 700; margin-bottom: 16px; }
 .mv-card p + p { margin-top: 14px; }
 
-.philosophy-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
-.principles { margin-top: 190px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; }
+.philosophy-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: center; }
+.principles { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; }
 .principle { border-top: 1px solid var(--line-strong); padding-top: 20px; }
 .principle h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
 
@@ -490,8 +570,6 @@ h2.show {
   .work-copy h2 { max-width: none; }
 
   .mv-grid, .philosophy-grid { grid-template-columns: 1fr; }
-  
-  .principles { margin-top: 0px; }
 }
 
 @media (max-width: 640px) {
@@ -515,12 +593,12 @@ h2.show {
 
   .modal-body { padding: 24px 20px 28px; }
   .modal-media { height: 150px; }
-  .principles { margin-top: 0px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .carousel { scroll-behavior: auto; }
   .modal[open] { animation: none; }
+  h2 { opacity: 1; transform: none; }
   * { transition: none !important; }
 }
