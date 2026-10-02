@@ -111,9 +111,9 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
 
 .site-logo {
   display: block; 
-  height: 40px;            /* fits a ~72px header */
+  height: 50px;            /* fits a ~72px header */
   width: auto;               /* keeps aspect ratio */
-  max-width: min(180px, 42vw);
+  max-width: min(200px, 42vw);
   object-fit: contain;
   object-position: left center;
 }
