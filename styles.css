@@ -61,6 +61,7 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
   padding: 10px 20px;
   border-radius: var(--radius-sm);
   font-family: inherit; font-size: .95rem; font-weight: 600; line-height: 1;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   border: 1.5px solid transparent;
   cursor: pointer;
   transition: background .2s, color .2s, border-color .2s, transform .2s;
