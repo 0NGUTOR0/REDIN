@@ -37,7 +37,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-body:has(dialog[open]) { overflow: hidden; }   /* lock page scroll while a popup is open */
+html { scrollbar-gutter: stable; }
+html:has(dialog[open]) { overflow: hidden; }   /* lock page scroll while a popup is open */
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
@@ -61,7 +62,6 @@ h1, h2, h3 { color: var(--green-800); line-height: 1.15; letter-spacing: -.02em;
   padding: 10px 20px;
   border-radius: var(--radius-sm);
   font-family: inherit; font-size: .95rem; font-weight: 600; line-height: 1;
-  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   border: 1.5px solid transparent;
   cursor: pointer;
   transition: background .2s, color .2s, border-color .2s, transform .2s;
@@ -305,7 +305,7 @@ h2.show {
   max-height: min(88vh, 920px);
   border-radius: var(--radius);
   background: #fff; color: var(--text);
-  box-shadow: 0 30px 80px rgba(8, 50, 30, .35);
+  box-shadow: 0 12px 40px rgba(8, 50, 30, .3);
   overflow: hidden;
 }
 .modal[open] { animation: modal-in .15s ease-out; }
